@@ -1,0 +1,18 @@
+* { 
+  box-sizing: border-box;
+  text-decoration: none;
+  background: transparent;
+  font-family: poppins, sans-serif;
+}
+
+body {
+  background: rgb(40, 40, 40);
+  color: white;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
