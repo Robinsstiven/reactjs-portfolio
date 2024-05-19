@@ -52,3 +52,9 @@
   object-fit: cover;
 }
 
+@media screen and (max-width: 480px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+}
