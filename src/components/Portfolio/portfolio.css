@@ -1,0 +1,30 @@
+#portfolio {
+  margin: 0 auto;
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.experience-title {
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+.experience-description {
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.portfolio-btn {
+  margin: 3rem 0;
+  padding: .5rem 2.5rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: white;
+}
