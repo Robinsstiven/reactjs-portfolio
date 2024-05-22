@@ -68,8 +68,8 @@
 .email::placeholder,
 .msg::placeholder {
   color: rgb(224, 224, 224);
+  font-size: .85rem;
 }
-
 
 .submit-btn {
   margin: 3rem 0;

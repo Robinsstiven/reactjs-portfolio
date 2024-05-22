@@ -26,8 +26,8 @@
 
 .desktopMenuItem:hover {
   color: blueviolet;
-  padding-bottom: .5rem;
-  border-bottom: 4px solid blueviolet;
+  padding-bottom: .4rem;
+  border-bottom: 4px solid rgb(138, 43, 226);
 }
 
 .desktopMenuButton {
@@ -56,5 +56,52 @@
   .navbar {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.active {
+  color: blueviolet;
+  padding-bottom: .4rem;
+  border-bottom: 4px solid blueviolet;
+}
+
+.mobile-menu {
+  object-fit: cover;
+  display: none;
+  width: 3rem;
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+  height: fit-content;
+  min-width: 15rem;
+  background-color: rgb(50, 50, 50);
+  border-radius: 1rem;
+}
+
+.mobile-item {
+  color: white;
+  padding: .5rem 3rem;
+  margin: .25rem;
+  background: rgb(39, 39, 39);
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .mobile-menu {
+    display: flex;
+  }
+  .desktopMenu {
+    display: none;
+  }
+  .desktopMenuButton {
+    display: none;
   }
 }
