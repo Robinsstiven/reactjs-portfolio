@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 import './contact.css';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
+        publicKey: 'YOUR_PUBLIC_KEY',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
   return (
     <section id="contact-page">
       <div className="customers">
@@ -14,7 +33,7 @@ const Contact = () => {
       <div id="contact-section">
         <h2>Contact Me</h2>
         <span className="">By filling out the form located below you can get in touch with me for any quote.</span>
-        <form className="contact-form">
+        <form className="contact-form" ref={form} inSubmit={sendEmail}>
           <input type="text" className="name" placeholder="Your name" />
           <input type="email" className="email" placeholder="Your email" />
           <textarea className="msg" name="message" rows={5} placeholder="Your message"></textarea>
